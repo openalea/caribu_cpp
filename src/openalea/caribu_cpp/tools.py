@@ -14,7 +14,7 @@ def _run_tool(tool_name, workdir='.', args=None):
     print(result.stderr)
     return result
 
-def mcsail(*args, **kwds): _run_tool("mcsail",*args, **kwds)
-def periodise(*args, **kwds): _run_tool("periodise",*args, **kwds)
-def s2v(*args, **kwds): _run_tool("s2v",*args, **kwds)
-def canestrad(*args, **kwds): _run_tool("canestrad",*args, **kwds)
+def mcsail(*args, **kwds): return _run_tool("mcsail",*args, **kwds)
+def periodise(*args, **kwds): return _run_tool("periodise",*args, **kwds)
+def s2v(*args, **kwds): return _run_tool("s2v",*args, **kwds)
+def canestrad(*args, **kwds): return _run_tool("canestrad",*args, **kwds)

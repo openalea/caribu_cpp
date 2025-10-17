@@ -4,11 +4,13 @@ build-backend = "scikit_build_core.build"
 
 # enable dynamic version based on git tags
 [tool.setuptools_scm]
+
 # Configure to align with the one of meta.yaml
 fallback_version = "1.0.1.dev0"
 version_scheme = "guess-next-dev"
 local_scheme = "no-local-version"
 
+# build
 [tool.scikit-build]
 metadata.version.provider = "scikit_build_core.metadata.setuptools_scm"
 cmake.build-type = "Release"
@@ -17,6 +19,11 @@ build.verbose = true
 # set compatibility with editable installs
 build-dir = "build"
 editable.rebuild = true
+
+# add python package
+[tool.scikit-build.wheel.packages]
+"openalea/caribu_cpp" = "src/openalea/caribu_cpp"
+
 
 [project]
 name = "openalea.caribu_cpp"
